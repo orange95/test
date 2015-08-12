@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QTimer *clock;
+
+private slots:
+    void updateTime();
 };
 
 #endif // MAINWINDOW_H
