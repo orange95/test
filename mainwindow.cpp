@@ -16,8 +16,9 @@ MainWindow::MainWindow(QWidget *parent) :
     qDebug() << str;
 
     QString str2 = "yes ";
-    QString str3 = str+str2;
+    QString str3 = str2+str;
     qDebug() << str3;
+
 
 }
 
