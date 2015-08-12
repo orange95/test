@@ -2,24 +2,14 @@
 #include "ui_mainwindow.h"
 #include "QString"
 #include "QDebug"
+#include "QFileDialog"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QString str = "hello";
-    qDebug() << str;
-    str.prepend("123");
-   qDebug() << str;
-   str.append("456");
-    qDebug() << str;
-
-    QString str2 = "yes ";
-    QString str3 = str2+str;
-    qDebug() << str3;
-
-
+    QString fileName = QFileDialog::getOpenFileName(this,tr("123"),"C://",tr("Images (*.png *.xpm *.jpg)"));
 }
 
 MainWindow::~MainWindow()
