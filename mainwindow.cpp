@@ -6,6 +6,8 @@
 #include "QTime"
 #include "QTimer"
 #include "QDateTime"
+#include "QVector"
+#include "QList"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -32,4 +34,16 @@ void MainWindow::updateTime()
     QDateTime date;
     date = date.currentDateTime();
     qDebug() << date.toString("yyyy:MM:dd");
+
+    timeSequence.append(time.toString("hh:mm:ss"));
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    clock->stop();
+    for(int i=0;i<timeSequence.size();i++)
+    {
+        qDebug() << timeSequence.at(i);  //== timeSequence[i]
+
+    }
 }

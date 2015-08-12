@@ -18,9 +18,11 @@ public:
 private:
     Ui::MainWindow *ui;
     QTimer *clock;
+    QList<QString> timeSequence;
 
 private slots:
     void updateTime();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H
